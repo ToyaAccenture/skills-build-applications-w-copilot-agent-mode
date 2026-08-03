@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 import { fetchResource, buildApiUrl } from '../api';
 
+const codespaceLeaderboardEndpoint = import.meta.env.VITE_CODESPACE_NAME
+  ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/leaderboard/`
+  : null;
+
 function Leaderboard() {
   const [entries, setEntries] = useState([]);
   const [error, setError] = useState(null);

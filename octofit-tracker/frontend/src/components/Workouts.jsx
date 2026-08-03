@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 import { fetchResource, buildApiUrl } from '../api';
 
+const codespaceWorkoutsEndpoint = import.meta.env.VITE_CODESPACE_NAME
+  ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/workouts/`
+  : null;
+
 function Workouts() {
   const [workouts, setWorkouts] = useState([]);
   const [error, setError] = useState(null);

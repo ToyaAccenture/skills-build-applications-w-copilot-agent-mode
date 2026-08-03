@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 import { fetchResource, buildApiUrl } from '../api';
 
+const codespaceUsersEndpoint = import.meta.env.VITE_CODESPACE_NAME
+  ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/users/`
+  : null;
+
 function Users() {
   const [users, setUsers] = useState([]);
   const [error, setError] = useState(null);

@@ -6,6 +6,7 @@ const codespaceBase = codespaceName
 export const API_BASE_URL = codespaceBase || '/api';
 export const buildApiUrl = (resource) => `${API_BASE_URL}/${resource}/`;
 
+
 const fetchJson = async (url) => {
   console.log('fetchResource: requesting url', url);
   const response = await fetch(url);

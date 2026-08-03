@@ -12,8 +12,9 @@ function App() {
       <header className="mb-4">
         <h1>OctoFit Tracker</h1>
         <p className="text-muted">
-          Use <code>VITE_CODESPACE_NAME</code> in <code>.env.local</code> to build the
-          Codespaces API base URL, or fall back to localhost if unset.
+          Define <code>VITE_CODESPACE_NAME</code> in <code>.env.local</code> to build
+          the Codespaces API base URL.
+          Without this variable, the app falls back to <code>http://localhost:8000</code>.
         </p>
         <nav className="nav nav-pills flex-column flex-sm-row gap-2">
           <NavLink className="nav-link" to="/users">
